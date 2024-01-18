@@ -1,0 +1,40 @@
+﻿<Window x:Class="PdfToDocConverterApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PDF to DOC Converter" SizeToContent="WidthAndHeight">
+    <Grid>
+        <StackPanel Margin="10">
+            <Button Content="Select PDF file" Click="SelectPdfButton_Click" Height="30" Margin="0,0,0,10">
+                <Button.FontWeight>
+                    <FontWeight>Bold</FontWeight>
+                </Button.FontWeight>
+            </Button>
+
+
+            <TextBlock Text="Select a folder to save:"/>
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBox x:Name="OutputFolderTextBox" IsReadOnly="True" Width="395" Height="30" Margin="0,0,5,0"/>
+                <Button Content="Review" Click="SelectOutputFolderButton_Click" Height="30" Width="100">
+                    <!-- Устанавливаем жирный шрифт для текста на кнопке -->
+                    <Button.FontWeight>
+                        <FontWeight>Bold</FontWeight>
+                    </Button.FontWeight>
+                </Button>
+            </StackPanel>
+
+            <Button Content="Convert" Click="ConvertButton_Click" Height="30" Margin="0,10,0,0">
+                <!-- Устанавливаем зеленый цвет фона для кнопки "Convert" -->
+                <Button.Background>
+                    <SolidColorBrush Color="LightGreen"/>
+                </Button.Background>
+                <Button.FontWeight>
+                    <FontWeight>Bold</FontWeight>
+                </Button.FontWeight>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
+
+
+
+
